@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uday Jaiswal | AI System Builder</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Static CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <div class="nav-logo">UDAY</div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-label">AI SYSTEM BUILDER</div>
+                <h1 class="hero-title">
+                    Uday <span>Jaiswal</span>
+                </h1>
+                <p class="hero-subtitle">
+                    BCA 4th Semester student building intelligent systems with AI, Data Science, and Python. 
+                    Self-learner | AI Enthusiast | Educator | Entrepreneur
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Certs</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Years</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Connect</a>
+                    <a href="#projects" class="btn btn-secondary">View Work</a>
+                </div>
+            </div>
+            <div class="hero-image">
+    <div class="image-frame">
+        {% load static %}
+        {% with 'images/uday.png' as image_path %}
+            {% static image_path as image_url %}
+            <img src="{{ image_url }}"  alt="Uday Jaiswal" class="profile-image" 
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="image-placeholder" style="display: none;">
+                <i class="fas fa-user-astronaut"></i>
+                <span>UDAY JAISWAL</span>
+                <p style="font-size: 0.8rem; margin-top: 1rem; opacity: 0.7;">📸 Photo: uday.jpg</p>
+            </div>
+        {% endwith %}
+    </div>
+</div>
+        </section>
+
+        <!-- PERSONAL INFO CARDS -->
+        <div class="info-grid" id="about">
+            <!-- Personal Info Card -->
+            <div class="info-card">
+                <div class="card-icon"><i class="fas fa-user"></i></div>
+                <h3 class="card-title">Personal Info</h3>
+                <div class="card-content">
+                    <p><i class="fas fa-chevron-right"></i> Uday Jaiswal</p>
+                    <p><i class="fas fa-chevron-right"></i> Lakhimpur Kheri, UP</p>
+                    <p><i class="fas fa-chevron-right"></i> Lucknow University</p>
+                    <p><i class="fas fa-chevron-right"></i> Sacred Heart Degree College</p>
+                    <p><i class="fas fa-chevron-right"></i> BCA 4th Semester</p>
+                </div>
+            </div>
+
+            <!-- Education Card -->
+            <div class="info-card">
+                <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3 class="card-title">Education</h3>
+                <div class="card-content">
+                    <p><i class="fas fa-chevron-right"></i> BCA - Lucknow University (4th Sem)</p>
+                    <p><i class="fas fa-chevron-right"></i> 10th & 12th - UP Board</p>
+                    <p><i class="fas fa-chevron-right"></i> Core: DBMS, Java, DSA</p>
+                    <p><i class="fas fa-chevron-right"></i> Data Science Fundamentals</p>
+                    <p><i class="fas fa-chevron-right"></i> Software Engineering</p>
+                </div>
+            </div>
+
+            <!-- Achievement & Strengths Card -->
+            <div class="info-card">
+                <div class="card-icon"><i class="fas fa-trophy"></i></div>
+                <h3 class="card-title">Achievements</h3>
+                <div class="card-content">
+                    <p><i class="fas fa-chevron-right"></i> Inspire Award 2020</p>
+                    <p><i class="fas fa-chevron-right"></i> Self-learner Mindset</p>
+                    <p><i class="fas fa-chevron-right"></i> AI & Automation Enthusiast</p>
+                    <p><i class="fas fa-chevron-right"></i> Business Thinker</p>
+                    <p><i class="fas fa-chevron-right"></i> Teaching & Mentoring</p>
+                </div>
+            </div>
+
+            <!-- Training Card -->
+            <div class="info-card">
+                <div class="card-icon"><i class="fas fa-certificate"></i></div>
+                <h3 class="card-title">Training</h3>
+                <div class="card-content">
+                    <p><i class="fas fa-chevron-right"></i> Softpro India 2024 - 1 Year</p>
+                    <p><i class="fas fa-chevron-right"></i> Full Stack Python + Data Science</p>
+                    <p><i class="fas fa-chevron-right"></i> PACS Sitapur 2025 - 45 Days</p>
+                    <p><i class="fas fa-chevron-right"></i> Trading (1 hr daily)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TIMELINE SECTION -->
+        <div class="timeline">
+            <h2 class="section-title">My Journey</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2024</div>
+                <div class="timeline-content">
+                    <h3>Softpro India Training</h3>
+                    <p>Full Stack Python with Data Science - 1 Year Program</p>
+                    <p>📍 Lucknow</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2025</div>
+                <div class="timeline-content">
+                    <h3>PACS Sitapur Training</h3>
+                    <p>45 Days Professional Training Program</p>
+                    <p>Practical Industry Exposure</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2026</div>
+                <div class="timeline-content">
+                    <h3>Certifications</h3>
+                    <p>HP Data Analyst • Deloitte Simulation • SRM Certification</p>
+                    <p>📊 Data Science Focus</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SKILLS SECTION -->
+        <div class="skills-section" id="skills">
+            <h2 class="section-title">Technical Arsenal</h2>
+            
+            <div class="skills-grid">
+                <!-- Programming Skills -->
+                <div class="skill-category">
+                    <h3 class="category-title"><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Python</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Java (OOP)</span><span>70%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>DSA</span><span>65%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>HTML/CSS</span><span>75%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                    </div>
+                </div>
+
+                <!-- Data & AI Skills -->
+                <div class="skill-category">
+                    <h3 class="category-title"><i class="fas fa-brain"></i> Data & AI</h3>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Data Science</span><span>60%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 60%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Data Analysis</span><span>65%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>AI Assistant</span><span>70%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Local LLM (Ollama)</span><span>55%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 55%"></div></div>
+                    </div>
+                </div>
+
+                <!-- Tools Skills -->
+                <div class="skill-category">
+                    <h3 class="category-title"><i class="fas fa-tools"></i> Tools</h3>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>VS Code</span><span>90%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Postman</span><span>65%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Git</span><span>70%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Ollama</span><span>60%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 60%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECTS SECTION (with links) -->
+        <div class="projects-section" id="projects">
+            <h2 class="section-title">Flagship Projects</h2>
+            
+            <div class="projects-grid">
+                <!-- Mr. Vortekron -->
+                <div class="project-card">
+                    <div class="project-icon">🤖</div>
+                    <h3 class="project-title">Mr. Vortekron</h3>
+                    <p class="project-desc">Personal AI Assistant with voice control, laptop automation, local LLM execution, and Hindi support. Works offline + online.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">AI/ML</span>
+                        <span class="project-tag">Voice</span>
+                        <span class="project-tag">Local LLM</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
+                        <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link" target="_blank"><i class="fas fa-info-circle"></i> Details</a>
+                    </div>
+                </div>
+
+                <!-- Codovet -->
+                <div class="project-card">
+                    <div class="project-icon">🌐</div>
+                    <h3 class="project-title">Codovet</h3>
+                    <p class="project-desc">Student-focused AI-guided project platform helping CS students bridge theory-practice gap with structured execution.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Django</span>
+                        <span class="project-tag">AI</span>
+                        <span class="project-tag">EdTech</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
+                        <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link" target="_blank"><i class="fas fa-info-circle"></i> Details</a>
+                    </div>
+                </div>
+
+                <!-- Hostel Finder -->
+                <div class="project-card">
+                    <div class="project-icon">🏠</div>
+                    <h3 class="project-title">Hostel Finder</h3>
+                    <p class="project-desc">Platform helping migrating students find hostels with location-based search, filters, and student-friendly UI.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Maps</span>
+                        <span class="project-tag">Web Dev</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
+                        <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link" target="_blank"><i class="fas fa-info-circle"></i> Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- RESUME CARD SECTION -->
+<div class="resume-section">
+    <h2 class="section-title">My Resume</h2>
+    
+    <div class="resume-card">
+        <div class="resume-icon">
+            <i class="fas fa-file-alt"></i>
+        </div>
+        <div class="resume-content">
+            <h3>Download My Resume</h3>
+            <p>Get a detailed overview of my education, skills, experience, and achievements in one PDF.</p>
+            <div class="resume-buttons">
+                <a href="#" class="btn btn-primary resume-btn" target="_blank">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+                <a href="#" class="btn btn-secondary resume-btn" target="_blank">
+                    <i class="fas fa-eye"></i> View Online
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- CERTIFICATIONS SECTION (with links) -->
+        <div class="certifications-section" id="certifications">
+            <h2 class="section-title">Latest Certifications</h2>
+            
+            <div class="certs-grid">
+                <a href="#" class="cert-card-link" target="_blank">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                        <div class="cert-content">
+                            <h4>Data Analyst Certificate</h4>
+                            <p>HP · February 2026</p>
+                            <span class="cert-view">View Certificate →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="cert-card-link" target="_blank">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="cert-content">
+                            <h4>Data Analyst Job Simulation</h4>
+                            <p>Deloitte · Jan-Feb 2026</p>
+                            <span class="cert-view">View Certificate →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="cert-card-link" target="_blank">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="cert-content">
+                            <h4>SRM Certification</h4>
+                            <p>Coursera · January 2026</p>
+                            <span class="cert-view">View Certificate →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="cert-card-link" target="_blank">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
+                        <div class="cert-content">
+                            <h4>Full Stack Python</h4>
+                            <p>Softpro India · 2024</p>
+                            <span class="cert-view">View Certificate →</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- EXPERIENCE SECTION -->
+        <div class="experience-section">
+            <div class="exp-card">
+                <div class="exp-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <div class="exp-content">
+                    <h3>Python & Web Technology Trainer</h3>
+                    <h4>Ankisha Computer (Government UP DESCO) | Present</h4>
+                    <p><i class="fas fa-check"></i> Teaching Python programming</p>
+                    <p><i class="fas fa-check"></i> Web technology instruction</p>
+                    <p><i class="fas fa-check"></i> Practical coding mentorship</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CAREER OBJECTIVE TAGLINE -->
+        <div class="tagline-section">
+            <div class="tagline-card">
+                <div class="tagline-text">"AI System Builder | Data Science Enthusiast | Python Developer | Educator"</div>
+                <div class="tagline-sub">Building Intelligent Systems for the Next Generation</div>
+                <div class="career-objective">
+                    <p>🎯 To become a Data Scientist and AI System Architect, building scalable intelligent systems that solve real-world problems. Long-term goal: Create AI-powered educational and automation platforms.</p>
+                </div>
+            </div>
+        </div>
+
+       <!-- CONTACT SECTION (with form) -->
+<div class="contact-section" id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    
+    <!-- Messages dikhane ke liye -->
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Let's Connect</h3>
+            <p>Have a question or want to work together? Feel free to reach out!</p>
+            
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Lakhimpur Kheri, Uttar Pradesh</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>jaiswaluday561@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+919569831537</span>
+                </div>
+            </div>
+            
+            <div class="contact-social">
+                <a href="#" class="contact-social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="contact-social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="contact-social-link"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" class="contact-social-link"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+        
+        <div class="contact-form-container">
+            <form method="post" action="{% url 'contact_form' %}" class="contact-form">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-text">
+                © 2026 Uday Jaiswal · AI System Builder · Lakhimpur Kheri, UP
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
