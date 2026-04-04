@@ -57,30 +57,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'myportfolio.wsgi.application'
 
-# Database Configuration - SQLite (Render ke liye best)
-DATA_DIR = '/opt/render/project/src/data'
-if os.path.exists(DATA_DIR):
-    # Render pe persistent disk use karo
-    if not os.path.exists(DATA_DIR):
-        os.makedirs(DATA_DIR)
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(DATA_DIR, 'db.sqlite3'),
-        }
+# Database Configuration - SQLite (Render ke liye)
+# Persistent disk ki zaroorat nahi, simple SQLite use karo
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
-else:
-    # Local development (MySQL)
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'uday_portfolio',
-            'USER': 'root',
-            'PASSWORD': '',
-            'HOST': 'localhost',
-            'PORT': '3306',
-        }
-    }
+}
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
